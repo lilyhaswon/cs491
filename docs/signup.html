@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Project 491</title>
+
+    <script type="text/javascript">
+        //for gender option 
+        function show() {
+            document.getElementById('otherTextbox').style.display = 'block';
+        } //show textbox
+        function hide() {
+            document.getElementById('otherTextbox').style.display = 'none';
+        } //hide textbox
+    </script>
+    <link rel="stylesheet" href="main.css" />
+</head>
+
+<body class="body">
+    <div class="morningAdd"></div>
+    <div class="eveningAdd"></div>
+    <div class="login"></div>
+    <div class="logout"></div>
+    <div id="wrapper">
+
+        <!-- Main -->
+        <div id="main">
+            <div class="innerPage">
+
+                <!-- Header -->
+                <header id="header">
+                    <a href="index.html" class="logo"><strong>Opioids</strong></a>
+                    <ul class="icons">
+                        <li><a href="index.html" class=""><span class="label">Home</span></a></li>
+                        <li><a href="about_us.html" class=""><span class="label">About Us</span></a></li>
+                        <li><a href="login.html" class=""><span class="label">Login</span></a></li>
+                    </ul>
+                </header>
+
+                <section id="banner">
+                    <div class="content">
+                        <header>
+                            <h1>We would like to get to know you!</h1>
+                        </header>
+                    </div>
+                    <span class="image object">
+                                <img src="image1.jpg" alt="" />
+                            </span>
+                </section>
+
+                <section>
+                    <form class="add" method="post">
+
+                        <label for="phone"><h3>Enter phone number:</h3></label><br>
+                        <input style="border:1px solid; border-radius: 4px;" type="text" maxlength="10" name="phone" placeholder="Ex: 1234567890" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" required><br>
+                        <br>
+
+
+                        <label for="age"><h3 style="margin-bottom: 10px;">Age: </h3></label>
+                        <input style="margin-bottom: 15px; border:1px solid; border-radius: 4px;" type="number" name="age" min="1" max="200" required>
+                        <br>
+
+                        <div>
+                            <h3>Gender:</h3>
+                        </div>
+                        <input type="radio" name="gender" value="Male" onclick="hide();" required>
+                        <label for="gender">Male </label>
+                        <input type="radio" name="gender" value="Female" onclick="hide();" required>
+                        <label for="gender">Female </label>
+                        <input type="radio" name="gender" value="Other" onclick="show();" required>
+                        <label for="gender">Other </label>
+                        <input type="radio" name="gender" value="Prefer not to disclose" onclick="hide();" required>
+                        <label for="gender">Prefer not to disclose </label>
+                        <textarea name="other" id="otherTextbox" style="display: none; resize: none;"></textarea>
+                        <br>
+
+                        <div>
+                            <h3>Ethnicity:</h3>
+                        </div>
+                        <input type="radio" name="ethnicity" value="non-hispanic-white" required>
+                        <label for="ethnicity">Non-Hispanic White</label>
+                        <input type="radio" name="ethnicity" value="hispanic/latino" required>
+                        <label for="ethnicity">Hispanic or Latino</label>
+                        <input type="radio" name="ethnicity" value="black/african-american" required>
+                        <label for="ethnicity">Black or African American</label>
+                        <input type="radio" name="ethnicity" value="asian">
+                        <label for="ethnicity">Asian</label>
+                        <input type="radio" name="ethnicity" value="native-american/alaska-native" required>
+                        <label for="ethnicity">Native American or Alaska Native</label>
+                        <input type="radio" name="ethnicity" value="native-hawaiians/other-pacific-islander" required>
+                        <label for="ethnicity">Native Hawaiians or other Pacific Islander</label>
+                        <input type="radio" name="ethnicity" value="2/more-races" required>
+                        <label for="ethnicity">Two or more races</label>
+                        <input type="radio" name="ethnicity" value="not-discolose" required>
+                        <label for="ethnicity">Prefer not to Disclose</label>
+                        <br>
+
+                        <div>
+                            <h3>Education:</h3>
+                        </div>
+                        <input type="radio" name="education" value="less-than-high-school" required>
+                        <label for="education">Less than high school graduation</label>
+                        <input type="radio" name="education" value="high-school-diploma" required>
+                        <label for="education">high school diploma or equivalent</label>
+                        <input type="radio" name="education" value="professional-degree" required>
+                        <label for="education">professional degree</label>
+                        <input type="radio" name="education" value="postsecondary-education" required>
+                        <label for="education">some postsecondary education</label>
+                        <input type="radio" name="education" value="postsecondary-degree" required>
+                        <label for="education">postsecondary diploma, certificate or degree</label>
+                        <input type="radio" name="education" value="postsecondary-graduate-degree" required>
+                        <label for="education">postsecondary graduate degree</label>
+                        <br>
+
+                        <div>
+                            <h3>Current Marital Status:</h3>
+                        </div>
+                        <input type="radio" name="current_marital_status" value="single" required>
+                        <label for="current_marital_status">single (never married)</label>
+                        <input type="radio" name="current_marital_status" value="married" required>
+                        <label for="ecurrent_marital_status">married or in a domestic partnership</label>
+                        <input type="radio" name="current_marital_status" value="widowed" required>
+                        <label for="current_marital_status">widowed</label>
+                        <input type="radio" name="current_marital_status" value="divorced" required>
+                        <label for="current_marital_status">divorced; or separated</label>
+                        <br>
+
+                        <div>
+                            <h3>Current Employment Status:</h3>
+                        </div>
+                        <input type="radio" name="current_employment_status" value="employed-full-time" required>
+                        <label for="current_employment_status">employed full-time (40 or more hours per week)</label>
+                        <input type="radio" name="current_employment_status" value="employed-part-time" required>
+                        <label for="current_employment_status">employed part-time (up to 39 hours per week)</label>
+                        <input type="radio" name="current_employment_status" value="unemployed-looking-for-work" required>
+                        <label for="current_employment_status">unemployed and currently looking for work/label>
+                                <input type="radio" name="current_employment_status" value="unemployed-not-looking-for-work" required>
+                                <label for="current_employment_status">unemployed and not currently looking for work</label>
+                        <input type="radio" name="current_employment_status" value="student" required>
+                        <label for="current_employment_status">student</label>
+                        <input type="radio" name="current_employment_status" value="retired" required>
+                        <label for="current_employment_status">retired</label>
+                        <input type="radio" name="current_employment_status" value="homemaker" required>
+                        <label for="current_employment_status">homemaker</label>
+                        <input type="radio" name="current_employment_status" value="self-employed" required>
+                        <label for="current_employment_status">self-employed</label>
+                        <input type="radio" name="current_employment_status" value="unable-to-work" required>
+                        <label for="current_employment_status">unable to work</label>
+                        <br>
+
+                        <div>
+                            <h3>Annual Income Range:</h3>
+                        </div>
+                        <input type="radio" name="annual_income" value="less-than-20,000" required>
+                        <label for="annual_income">less than $20,000;</label>
+                        <input type="radio" name="annual_income" value="20,000-to-34,999" required>
+                        <label for="annual_income">$20,000 to $34,999</label>
+                        <input type="radio" name="annual_income" value="35,000-to-49,999" required>
+                        <label for="annual_income">$35,000 to $49,999</label>
+                        <input type="radio" name="annual_income" value="50,000-to-74,999" required>
+                        <label for="annual_income">$50,000 to $74,999</label>
+                        <input type="radio" name="annual_income" value="75,000-to-99,999" required>
+                        <label for="annual_income">$75,000 to $99,999</label>
+                        <input type="radio" name="annual_income" value="over-100,000" required>
+                        <label for="annual_income">over $100,000</label>
+                        <br>
+
+                        <div>
+                            <h3>Health literacy: "How often do you need to have someone help you when you read instructions, pamphlets, or other written material from your doctor or pharmacy?"</h3>
+                        </div>
+                        <input type="radio" name="health_literacy" value="never" required>
+                        <label for="health_literacy">Never</label>
+                        <input type="radio" name="health_literacy" value="rarely" required>
+                        <label for="health_literacy">Rarely</label>
+                        <input type="radio" name="health_literacy" value="sometimes" required>
+                        <label for="health_literacy">Sometimes</label>
+                        <input type="radio" name="health_literacy" value="often" required>
+                        <label for="health_literacy">Often</label>
+                        <input type="radio" name="health_literacy" value="always" required>
+                        <label for="health_literacy">Always</label>
+                        <br>
+
+                        <div>
+                            <h3>Current health insurance status:</h3>
+                        </div>
+                        <input type="radio" name="current_health_insurance_status" value="yes" required>
+                        <label for="current_health_insurance_status">Yes</label>
+                        <input type="radio" name="current_health_insurance_status" value="no" required>
+                        <label for="current_health_insurance_status">No</label>
+                        <br>
+
+                        <div>
+                            <h3>General self-rated health:“In general, would you say your health is:”</h3>
+                        </div>
+                        <input type="radio" name="general_self_rated_health" value="poor" required>
+                        <label for="general_self_rated_health">Poor</label>
+                        <input type="radio" name="general_self_rated_health" value="fair" required>
+                        <label for="general_self_rated_health">Fair</label>
+                        <input type="radio" name="general_self_rated_health" value="good" required>
+                        <label for="general_self_rated_health">Good</label>
+                        <input type="radio" name="general_self_rated_health" value="very-good" required>
+                        <label for="general_self_rated_health">Very Good</label>
+                        <input type="radio" name="general_self_rated_health" value="excellent" required>
+                        <label for="general_self_rated_health">Excellent</label>
+                        <br>
+
+                        <label for="height"><h3>Height(feet.inches):</h3></label>
+                        <input style="border:1px solid; border-radius: 4px;" type="number" name="height" placeholder="Ex: 5.3" min="0" max="100" step="0.01" required>
+                        <br>
+
+                        <label for="weight"><h3>Weight(pounds/lbs):</h3></label>
+                        <input style="border:1px solid; border-radius: 4px;" type="number" name="weight" placeholder="Enter" min="0" max="1000" required>
+                        <br>
+
+                        <label for="comorbid_conditions"><h3>Comorbid Conditions:</h3></label>
+                        <input style="border:1px solid; border-radius: 4px;" type="text" placeholder="Type here" name="comorbid_conditions" required>
+                        <br>
+
+                        <!--Social isolation questions:-->
+                        <div>
+                            <h3>I am unhappy doing so many things alone:</h3>
+                        </div>
+                        <input type="radio" name="social_isolaton_1" value="often" required>
+                        <label for="social_isolaton_1">often</label>
+                        <input type="radio" name="social_isolaton_1" value="sometimes" required>
+                        <label for="social_isolaton_1">sometimes</label>
+                        <input type="radio" name="social_isolaton_1" value="rarely" required>
+                        <label for="social_isolaton_1">rarely</label>
+                        <input type="radio" name="social_isolaton_1" value="never" required>
+                        <label for="social_isolaton_1">never</label>
+                        <br>
+
+                        <div>
+                            <h3>I have nobody to talk to:</h3>
+                        </div>
+                        <input type="radio" name="social_isolaton_2" value="often" required>
+                        <label for="social_isolaton_2">often</label>
+                        <input type="radio" name="social_isolaton_2" value="sometimes" required>
+                        <label for="social_isolaton_2">sometimes</label>
+                        <input type="radio" name="social_isolaton_2" value="rarely" required>
+                        <label for="social_isolaton_2">rarely</label>
+                        <input type="radio" name="social_isolaton_2" value="never" required>
+                        <label for="social_isolaton_2">never</label>
+                        <br>
+
+                        <div>
+                            <h3>I cannot tolerate being so alone:</h3>
+                        </div>
+                        <input type="radio" name="social_isolaton_3" value="often" required>
+                        <label for="social_isolaton_3">often</label>
+                        <input type="radio" name="social_isolaton_3" value="sometimes" required>
+                        <label for="social_isolaton_3">sometimes</label>
+                        <input type="radio" name="social_isolaton_3" value="rarely" required>
+                        <label for="social_isolaton_3">rarely</label>
+                        <input type="radio" name="social_isolaton_3" value="never" required>
+                        <label for="social_isolaton_3">never</label>
+                        <br>
+
+                        <div>
+                            <h3>I lack companionship:
+                                <h3>
+                        </div>
+                        <input type="radio" name="social_isolaton_4" value="often" required>
+                        <label for="social_isolaton_4">often</label>
+                        <input type="radio" name="social_isolaton_4" value="sometimes" required>
+                        <label for="social_isolaton_4">sometimes</label>
+                        <input type="radio" name="social_isolaton_4" value="rarely" required>
+                        <label for="social_isolaton_4">rarely</label>
+                        <input type="radio" name="social_isolaton_4" value="never" required>
+                        <label for="social_isolaton_4">never</label>
+                        <br>
+
+                        <div>
+                            <h3>I feel as if nobody really understands me:</h3>
+                        </div>
+                        <input type="radio" name="social_isolaton_5" value="often" required>
+                        <label for="social_isolaton_5">often</label>
+                        <input type="radio" name="social_isolaton_5" value="sometimes" required>
+                        <label for="social_isolaton_5">sometimes</label>
+                        <input type="radio" name="social_isolaton_5" value="rarely" required>
+                        <label for="social_isolaton_5">rarely</label>
+                        <input type="radio" name="social_isolaton_5" value="never" required>
+                        <label for="social_isolaton_5">never</label>
+                        <br>
+
+                        <div>
+                            <h3>I find myself waiting for people to call or write:</h3>
+                        </div>
+                        <input type="radio" name="social_isolaton_6" value="often" required>
+                        <label for="social_isolaton_6">often</label>
+                        <input type="radio" name="social_isolaton_6" value="sometimes" required>
+                        <label for="social_isolaton_6">sometimes</label>
+                        <input type="radio" name="social_isolaton_6" value="rarely" required>
+                        <label for="social_isolaton_6">rarely</label>
+                        <input type="radio" name="social_isolaton_6" value="never" required>
+                        <label for="social_isolaton_6">never</label>
+                        <br>
+
+                        <div>
+                            <h3>There is no one I can turn to:</h3>
+                        </div>
+                        <input type="radio" name="social_isolaton_7" value="often" required>
+                        <label for="social_isolaton_7">often</label>
+                        <input type="radio" name="social_isolaton_7" value="sometimes" required>
+                        <label for="social_isolaton_7">sometimes</label>
+                        <input type="radio" name="social_isolaton_7" value="rarely" required>
+                        <label for="social_isolaton_7">rarely</label>
+                        <input type="radio" name="social_isolaton_7" value="never" required>
+                        <label for="social_isolaton_7">never</label>
+                        <br>
+
+                        <div>
+                            <h3>I am no longer close to anyone:</h3>
+                        </div>
+                        <input type="radio" name="social_isolaton_8" value="often" required>
+                        <label for="social_isolaton_8">often</label>
+                        <input type="radio" name="social_isolaton_8" value="sometimes" required>
+                        <label for="social_isolaton_8">sometimes</label>
+                        <input type="radio" name="social_isolaton_8" value="rarely" required>
+                        <label for="social_isolaton_8">rarely</label>
+                        <input type="radio" name="social_isolaton_8" value="never" required>
+                        <label for="social_isolaton_8">never</label>
+                        <br>
+
+                        <div>
+                            <h3>My interests and ideas are not shared by those around me:</h3>
+                        </div>
+                        <input type="radio" name="social_isolaton_9" value="often" required>
+                        <label for="social_isolaton_9">often</label>
+                        <input type="radio" name="social_isolaton_9" value="sometimes" required>
+                        <label for="social_isolaton_9">sometimes</label>
+                        <input type="radio" name="social_isolaton_9" value="rarely" required>
+                        <label for="social_isolaton_9">rarely</label>
+                        <input type="radio" name="social_isolaton_9" value="never" required>
+                        <label for="social_isolaton_9">never</label>
+                        <br>
+
+                        <div>
+                            <h3>I feel left out:</h3>
+                        </div>
+                        <input type="radio" name="social_isolaton_10" value="often" required>
+                        <label for="social_isolaton_10">often</label>
+                        <input type="radio" name="social_isolaton_10" value="sometimes" required>
+                        <label for="social_isolaton_10">sometimes</label>
+                        <input type="radio" name="social_isolaton_10" value="rarely" required>
+                        <label for="social_isolaton_10">rarely</label>
+                        <input type="radio" name="social_isolaton_10" value="never" required>
+                        <label for="social_isolaton_10">never</label>
+                        <br>
+
+                        <div>
+                            <h3>I feel completely alone:</h3>
+                        </div>
+                        <input type="radio" name="social_isolaton_11" value="often" required>
+                        <label for="social_isolaton_11">often</label>
+                        <input type="radio" name="social_isolaton_11" value="sometimes" required>
+                        <label for="social_isolaton_11">sometimes</label>
+                        <input type="radio" name="social_isolaton_11" value="rarely" required>
+                        <label for="social_isolaton_11">rarely</label>
+                        <input type="radio" name="social_isolaton_11" value="never" required>
+                        <label for="social_isolaton_11">never</label>
+                        <br>
+
+                        <div>
+                            <h3>I am unable to reach out and communicate with those around me:</h3>
+                        </div>
+                        <input type="radio" name="social_isolaton_12" value="often" required>
+                        <label for="social_isolaton_12">often</label>
+                        <input type="radio" name="social_isolaton_12" value="sometimes" required>
+                        <label for="social_isolaton_12">sometimes</label>
+                        <input type="radio" name="social_isolaton_12" value="rarely" required>
+                        <label for="social_isolaton_12">rarely</label>
+                        <input type="radio" name="social_isolaton_12" value="never" required>
+                        <label for="social_isolaton_12">never</label>
+                        <br>
+
+                        <div>
+                            <h3>My social relationships are superficial:</h3>
+                        </div>
+                        <input type="radio" name="social_isolaton_13" value="often" required>
+                        <label for="social_isolaton_13">often</label>
+                        <input type="radio" name="social_isolaton_13" value="sometimes" required>
+                        <label for="social_isolaton_13">sometimes</label>
+                        <input type="radio" name="social_isolaton_13" value="rarely" required>
+                        <label for="social_isolaton_13">rarely</label>
+                        <input type="radio" name="social_isolaton_13" value="never" required>
+                        <label for="social_isolaton_13">never</label>
+                        <br>
+
+                        <div>
+                            <h3>I feel starved for company:</h3>
+                        </div>
+                        <input type="radio" name="social_isolaton_14" value="often" required>
+                        <label for="social_isolaton_14">often</label>
+                        <input type="radio" name="social_isolaton_14" value="sometimes" required>
+                        <label for="social_isolaton_14">sometimes</label>
+                        <input type="radio" name="social_isolaton_14" value="rarely" required>
+                        <label for="social_isolaton_14">rarely</label>
+                        <input type="radio" name="social_isolaton_14" value="never" required>
+                        <label for="social_isolaton_14">never</label>
+                        <br>
+
+                        <div>
+                            <h3>No one really knows me welle:</h3>
+                        </div>
+                        <input type="radio" name="social_isolaton_15" value="often" required>
+                        <label for="social_isolaton_15">often</label>
+                        <input type="radio" name="social_isolaton_15" value="sometimes" required>
+                        <label for="social_isolaton_15">sometimes</label>
+                        <input type="radio" name="social_isolaton_15" value="rarely" required>
+                        <label for="social_isolaton_15">rarely</label>
+                        <input type="radio" name="social_isolaton_15" value="never" required>
+                        <label for="social_isolaton_15">never</label>
+                        <br>
+
+                        <div>
+                            <h3>I feel isolated from others:</h3>
+                        </div>
+                        <input type="radio" name="social_isolaton_16" value="often" required>
+                        <label for="social_isolaton_16">often</label>
+                        <input type="radio" name="social_isolaton_16" value="sometimes" required>
+                        <label for="social_isolaton_16">sometimes</label>
+                        <input type="radio" name="social_isolaton_16" value="rarely" required>
+                        <label for="social_isolaton_16">rarely</label>
+                        <input type="radio" name="social_isolaton_16" value="never" required>
+                        <label for="social_isolaton_16">never</label>
+                        <br>
+
+                        <div>
+                            <h3>I am unhappy being so withdrawn:</h3>
+                        </div>
+                        <input type="radio" name="social_isolaton_17" value="often" required>
+                        <label for="social_isolaton_17">often</label>
+                        <input type="radio" name="social_isolaton_17" value="sometimes" required>
+                        <label for="social_isolaton_17">sometimes</label>
+                        <input type="radio" name="social_isolaton_17" value="rarely" required>
+                        <label for="social_isolaton_17">rarely</label>
+                        <input type="radio" name="social_isolaton_17" value="never" required>
+                        <label for="social_isolaton_17">never</label>
+                        <br>
+
+                        <div>
+                            <h3>It is difficult for me to make friends:</h3>
+                        </div>
+                        <input type="radio" name="social_isolaton_18" value="often" required>
+                        <label for="social_isolaton_18">often</label>
+                        <input type="radio" name="social_isolaton_18" value="sometimes" required>
+                        <label for="social_isolaton_18">sometimes</label>
+                        <input type="radio" name="social_isolaton_18" value="rarely" required>
+                        <label for="social_isolaton_18">rarely</label>
+                        <input type="radio" name="social_isolaton_18" value="never" required>
+                        <label for="social_isolaton_18">never</label>
+                        <br>
+
+                        <div>
+                            <h3>I feel shut out and excluded by others:</h3>
+                        </div>
+                        <input type="radio" name="social_isolaton_19" value="often" required>
+                        <label for="social_isolaton_19">often</label>
+                        <input type="radio" name="social_isolaton_19" value="sometimes" required>
+                        <label for="social_isolaton_19">sometimes</label>
+                        <input type="radio" name="social_isolaton_19" value="rarely" required>
+                        <label for="social_isolaton_19">rarely</label>
+                        <input type="radio" name="social_isolaton_19" value="never" required>
+                        <label for="social_isolaton_19">never</label>
+                        <br>
+
+                        <div>
+                            <h3>People are around me but not with me:</h3>
+                        </div>
+                        <input type="radio" name="social_isolaton_20" value="often" required>
+                        <label for="social_isolaton_20">often</label>
+                        <input type="radio" name="social_isolaton_20" value="sometimes" required>
+                        <label for="social_isolaton_20">sometimes</label>
+                        <input type="radio" name="social_isolaton_20" value="rarely" required>
+                        <label for="social_isolaton_20">rarely</label>
+                        <input type="radio" name="social_isolaton_20" value="never" required>
+                        <label for="social_isolaton_20">never</label>
+                        <br>
+
+                        <!--Risk for opioid misuse questions -->
+                        <div>
+                            <h3>Do you have a family history of alcohol abuse?</h3>
+                        </div>
+                        <input type="radio" name="risk_for_opioid_misuse_1" value="yes" required>
+                        <label for="risk_for_opioid_misuse_1">Yes</label>
+                        <input type="radio" name="risk_for_opioid_misuse_1" value="no" required>
+                        <label for="risk_for_opioid_misuse_1">No</label>
+                        <input type="radio" name="risk_for_opioid_misuse_1" value="not-to-answer" required>
+                        <label for="risk_for_opioid_misuse_1">Choose not to answer</label>
+                        <br>
+
+                        <div>
+                            <h3>Do you have a family history of illegal drugs abuse?
+                                <h3>
+                        </div>
+                        <input type="radio" name="risk_for_opioid_misuse_2" value="yes" required>
+                        <label for="risk_for_opioid_misuse_2">Yes</label>
+                        <input type="radio" name="risk_for_opioid_misuse_2" value="no" required>
+                        <label for="risk_for_opioid_misuse_2">No</label>
+                        <input type="radio" name="risk_for_opioid_misuse_2" value="not-to-answer" required>
+                        <label for="risk_for_opioid_misuse_2">Choose not to answer</label>
+                        <br>
+
+                        <div>
+                            <h3>Do you have a family history of prescription drugs abuse?</h3>
+                        </div>
+                        <input type="radio" name="risk_for_opioid_misuse_3" value="yes" required>
+                        <label for="rrisk_for_opioid_misuse_3">Yes</label>
+                        <input type="radio" name="risk_for_opioid_misuse_3" value="no" required>
+                        <label for="risk_for_opioid_misuse_3">No</label>
+                        <input type="radio" name="risk_for_opioid_misuse_3" value="not-to-answer" required>
+                        <label for="risk_for_opioid_misuse_3">Choose not to answer</label>
+                        <br>
+
+                        <div>
+                            <h3>Do you have a personal history of alcohol abuse?</h3>
+                        </div>
+                        <input type="radio" name="risk_for_opioid_misuse_4" value="yes" required>
+                        <label for="risk_for_opioid_misuse_4">Yes</label>
+                        <input type="radio" name="risk_for_opioid_misuse_4" value="no" required>
+                        <label for="risk_for_opioid_misuse_4">No</label>
+                        <input type="radio" name="risk_for_opioid_misuse_4" value="not-to-answer" required>
+                        <label for="risk_for_opioid_misuse_4">Choose not to answer</label>
+                        <br>
+
+                        <div>
+                            <h3>Do you have a personal history of illegal drugs abuse?</h3>
+                        </div>
+                        <input type="radio" name="risk_for_opioid_misuse_5" value="yes" required>
+                        <label for="risk_for_opioid_misuse_5">Yes</label>
+                        <input type="radio" name="risk_for_opioid_misuse_5" value="no" required>
+                        <label for="risk_for_opioid_misuse_5">No</label>
+                        <input type="radio" name="risk_for_opioid_misuse_5" value="not-to-answer" required>
+                        <label for="risk_for_opioid_misuse_5">Choose not to answer</label>
+                        <br>
+
+                        <div>
+                            <h3>Do you have a personal history of prescription drugs abuse?</h3>
+                        </div>
+                        <input type="radio" name="risk_for_opioid_misuse_6" value="yes" required>
+                        <label for="risk_for_opioid_misuse_6">Yes</label>
+                        <input type="radio" name="risk_for_opioid_misuse_6" value="no" required>
+                        <label for="risk_for_opioid_misuse-6">No</label>
+                        <input type="radio" name="risk_for_opioid_misuse_6" value="not-to-answer" required>
+                        <label for="risk_for_opioid_misuse_6">Choose not to answer</label>
+                        <br>
+
+                        <div>
+                            <h3>Are you aged between 16-45?</h3>
+                        </div>
+                        <input type="radio" name="risk_for_opioid_misuse_7" value="yes" required>
+                        <label for="risk_for_opioid_misuse_7">Yes</label>
+                        <input type="radio" name="risk_for_opioid_misuse_7" value="no" required>
+                        <label for="risk_for_opioid_misuse_7">No</label>
+                        <input type="radio" name="risk_for_opioid_misuse_7" value="not-to-answer" required>
+                        <label for="risk_for_opioid_misuse_7">Choose not to answer</label>
+                        <br>
+
+                        <div>
+                            <h3>Do you have a history of preadolescent sexual abuse?</h3>
+                        </div>
+                        <input type="radio" name="risk_for_opioid_misuse_8" value="yes" required>
+                        <label for="risk_for_opioid_misuse_8">Yes</label>
+                        <input type="radio" name="risk_for_opioid_misuse_8" value="no" required>
+                        <label for="risk_for_opioid_misuse_8">No</label>
+                        <input type="radio" name="risk_for_opioid_misuse_8" value="not-to-answer" required>
+                        <label for="risk_for_opioid_misuse_8">Choose not to answer</label>
+                        <br>
+
+                        <div>
+                            <h3>Do you attention deficit disorder?</h3>
+                        </div>
+                        <input type="radio" name="risk_for_opioid_misuse_9" value="yes" required>
+                        <label for="risk_for_opioid_misuse_9">Yes</label>
+                        <input type="radio" name="risk_for_opioid_misuse_9" value="no" required>
+                        <label for="risk_for_opioid_misuse_9">No</label>
+                        <input type="radio" name="risk_for_opioid_misuse_9" value="not-to-answer" required>
+                        <label for="risk_for_opioid_misuse_9">Choose not to answer</label>
+                        <br>
+
+                        <div>
+                            <h3>Do you have obsessive compulsive disorder?</h3>
+                        </div>
+                        <input type="radio" name="risk_for_opioid_misuse_10" value="yes" required>
+                        <label for="risk_for_opioid_misuse_10">Yes</label>
+                        <input type="radio" name="risk_for_opioid_misuse_10" value="no" required>
+                        <label for="risk_for_opioid_misuse_10">No</label>
+                        <input type="radio" name="risk_for_opioid_misuse_10" value="not-to-answer" required>
+                        <label for="risk_for_opioid_misuse_10">Choose not to answer</label>
+                        <br>
+
+                        <div>
+                            <h3>Are you bipolar?</h3>
+                        </div>
+                        <input type="radio" name="risk_for_opioid_misuse_11" value="yes" required>
+                        <label for="risk_for_opioid_misuse_11">Yes</label>
+                        <input type="radio" name="risk_for_opioid_misuse_11" value="no" required>
+                        <label for="risk_for_opioid_misuse_11">No</label>
+                        <input type="radio" name="risk_for_opioid_misuse_11" value="not-to-answer" required>
+                        <label for="risk_for_opioid_misuse_11">Choose not to answer</label>
+                        <br>
+
+                        <div>
+                            <h3>Do you have schizophrenia?</h3>
+                        </div>
+                        <input type="radio" name="risk_for_opioid_misuse_12" value="yes" required>
+                        <label for="risk_for_opioid_misuse_12">Yes</label>
+                        <input type="radio" name="risk_for_opioid_misuse_12" value="no" required>
+                        <label for="risk_for_opioid_misuse_12">No</label>
+                        <input type="radio" name="risk_for_opioid_misuse_12" value="not-to-answer" required>
+                        <label for="risk_for_opioid_misuse_12">Choose not to answer</label>
+                        <br>
+
+                        <div>
+                            <h3>Do you have depression?</h3>
+                        </div>
+                        <input type="radio" name="risk_for_opioid_misuse_13" value="yes" required>
+                        <label for="risk_for_opioid_misuse_13">Yes</label>
+                        <input type="radio" name="risk_for_opioid_misuse_13" value="no" required>
+                        <label for="risk_for_opioid_misuse_13">No</label>
+                        <input type="radio" name="risk_for_opioid_misuse_13" value="not-to-answer" required>
+                        <label for="risk_for_opioid_misuse_13">Choose not to answer</label>
+                        <br>
+                        <button>Submit</button>
+                    </form>
+                </section>
+
+            </div>
+        </div>
+    </div>
+    <script src="bundle.js"></script>
+</body>
+
+</html>

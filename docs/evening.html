@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Evening Question Form </title>
+
+    <script type="text/javascript">
+        //for yes options 
+        function show1() {
+            document.getElementById('otherTextbox1').style.display = 'block';
+        } //show textbox
+        function hide1() {
+            document.getElementById('otherTextbox1').style.display = 'none';
+        } //hide textbox
+
+        function show2() {
+            document.getElementById('otherTextbox2').style.display = 'block';
+        } //show textbox
+        function hide2() {
+            document.getElementById('otherTextbox2').style.display = 'none';
+        } //hide textbox
+    </script>
+    <link rel="stylesheet" href="main.css" />
+
+</head>
+
+<body class="body">
+
+
+    <div class="morningAdd"></div>
+    <div class="login"></div>
+    <div class="logout"></div>
+    <div class="add"></div>
+    <div id="wrapper">
+
+        <!-- Main -->
+        <div id="main">
+            <div class="innerPage">
+
+                <!-- Header -->
+                <header id="header">
+                    <a href="index.html" class="logo"><strong>Opioids</strong></a>
+                    <ul class="icons">
+                        <li><a href="about_us.html" class=""><span class="label">About Us</span></a></li>
+                        <li><a href="login.html" class="logout"><span class="label">Logout</span></a></li>
+                    </ul>
+                </header>
+
+                <section id="banner">
+                    <div class="content">
+                        <header>
+                            <center>
+                                <h1>Good Evening!</h1>
+                            </center>
+                        </header>
+                    </div>
+                    <span class="image object">
+                                  <img src="image1.jpg" alt="" />
+                              </span>
+                </section>
+
+                <section>
+
+                    <form class="eveningAdd" method="post">
+                        <div>
+                            <h3>Did you do any exercise today?</h3>
+                        </div>
+                        <input type="radio" name="exercise" value="no" onclick="hide1();" required>
+                        <label for="exercise">No</label>
+                        <input type="radio" name="exercise" value="yes" onclick="show1();" required>
+                        <label for="exercise">Yes</label>
+
+                        <div id="otherTextbox1" style="display: none;">
+
+                            <!--row 1-->
+                            <label for="exercise_time1">Time of day:</label>
+                            <input class="exercise_time_input" list="exercise_time_stamp1" name="exercise_time1">
+                            <datalist id="exercise_time_stamp1">
+                                            <option value="Morning (12am to 11:59am)">
+                                            <option value="Afternoon (12pm to 5.59pm)">
+                                            <option value="Evening (6pm to 11:59pm)">
+                                        </datalist>
+
+                            <label for="exercise_description1">Description of activity including type and intensity:</label>
+                            <textarea class="exercise_time_input" name="exercise_description1" style="resize: none;" placeholder=""></textarea>
+
+                            <label for="duration1">Duration:(hours.minutes) </label>
+                            <input class="exercise_time_input" type="number" name="duration1" placeholder="Ex: 1.3" min="0" max="100" step="0.01">
+
+                            <br>
+                            <br>
+                            <!--row 2-->
+                            <label for="exercise_time2">Time of day:</label>
+                            <input class="exercise_time_input" list="exercise_time_stamp2" name="exercise_time2">
+                            <datalist id="exercise_time_stamp2">
+                                            <option value="Morning (12am to 11:59am)">
+                                            <option value="Afternoon (12pm to 5.59pm)">
+                                            <option value="Evening (6pm to 11:59pm)">
+                                        </datalist>
+
+                            <label for="exercise_description2">Description of activity including type and intensity:</label>
+                            <textarea class="exercise_time_input" name="exercise_description2" style="resize: none;" placeholder=""></textarea>
+
+                            <label for="duration2">Duration:(hours.minutes) </label>
+                            <input class="exercise_time_input" type="number" name="duration2" placeholder="Ex: 1.3" min="0" max="100" step="0.01">
+
+                            <br>
+                            <br>
+                            <!--row 3-->
+                            <label for="exercise_time3">Time of day:</label>
+                            <input class="exercise_time_input" list="exercise_time_stamp3" name="exercise_time3">
+                            <datalist id="exercise_time_stamp3">
+                                            <option value="Morning (12am to 11:59am)">
+                                            <option value="Afternoon (12pm to 5.59pm)">
+                                            <option value="Evening (6pm to 11:59pm)">
+                                        </datalist>
+
+                            <label for="exercise_description3">Description of activity including type and intensity:</label>
+                            <textarea class="exercise_time_input" name="exercise_description3" style="resize: none;" placeholder=""></textarea>
+
+                            <label for="duration3">Duration:(hours.minutes) </label>
+                            <input class="exercise_time_input" type="number" name="duration3" placeholder="Ex: 1.3" min="0" max="100" step="0.01">
+
+                            <br>
+                            <br>
+                            <!--row 4-->
+                            <label for="exercise_time4">Time of day:</label>
+                            <input class="exercise_time_input" list="exercise_time_stamp4" name="exercise_time4">
+                            <datalist id="exercise_time_stamp4">
+                                            <option value="Morning (12am to 11:59am)">
+                                            <option value="Afternoon (12pm to 5.59pm)">
+                                            <option value="Evening (6pm to 11:59pm)">
+                                        </datalist>
+
+                            <label for="exercise_description4">Description of activity including type and intensity:</label>
+                            <textarea class="exercise_time_input" name="exercise_description4" style="resize: none;" placeholder=""></textarea>
+
+                            <label for="duration4">Duration:(hours.minutes) </label>
+                            <input class="exercise_time_input" type="number" name="duration4" placeholder="Ex: 1.3" min="0" max="100" step="0.01">
+                        </div>
+
+
+                        <br>
+                        <label for="alcohol_consumption"><h3>How many alcoholic beverages did you consume today?</h3></label>
+                        <input class="exercise_time_input" type="number" name="alcohol_consumption" placeholder="# of Bev" min="0" max="300" required>
+                        <br>
+
+                        <label for="mood"><h3>On a scale from 0 to 10 where 0 means “very depressed” and 10 means “very happy”, how was your mood today?</h3></label>
+                        <input class="exercise_time_input" type="number" name="mood" placeholder="Rate" min="0" max="10" required>
+                        <br>
+
+                        <div>
+                            <h3>Did you take any opioid medication today?</h3>
+                        </div>
+                        <input type="radio" name="medicine" value="no" onclick="hide2();" required>
+                        <label for="medicine">No</label>
+                        <input type="radio" name="medicine" value="yes" onclick="show2();" required>
+                        <label for="medicine">Yes</label>
+                        <div id="otherTextbox2" style="display: none;">
+
+                            <!-- row1 -->
+                            <label for="medicine_time1">Time of day:</label>
+                            <input class="exercise_time_input" list="medicine_time_stamp1" name="medicine_time1">
+                            <datalist id="medicine_time_stamp1">
+                                                <option value="Morning (12am to 11:59am)">
+                                                <option value="Afternoon (12pm to 5.59pm)">
+                                                <option value="Evening (6pm to 11:59pm)">
+                                            </datalist>
+
+                            <label for="medicine_description1">Description of Medication-Name and dose:</label>
+                            <textarea class="exercise_time_input" name="medicine_description1" style="resize: none;" placeholder=""></textarea>
+
+                            <label for="pain1">Pain rating 0-10:</label>
+                            <input class="exercise_time_input" type="number" name="pain1" min="0" max="10">
+
+                            <label for="non_opioid_description1">Non-opioid pain management modalities tried first:</label>
+                            <textarea class="exercise_time_input" name="non_opioid_description1" style="resize: none;" placeholder=""></textarea>
+
+                            <br>
+                            <br>
+
+                            <!-- row2 -->
+                            <label for="medicine_time2">Time of day:</label>
+                            <input class="exercise_time_input" list="medicine_time_stamp2" name="medicine_time2">
+                            <datalist id="medicine_time_stamp2">
+                                                <option value="Morning (12am to 11:59am)">
+                                                <option value="Afternoon (12pm to 5.59pm)">
+                                                <option value="Evening (6pm to 11:59pm)">
+                                            </datalist>
+
+                            <label for="medicine_description2">Description of Medication-Name and dose:</label>
+                            <textarea class="exercise_time_input" name="medicine_description2" style="resize: none;" placeholder=""></textarea>
+
+                            <label for="pain2">Pain rating 0-10:</label>
+                            <input class="exercise_time_input" type="number" name="pain2" min="0" max="10">
+
+                            <label for="non_opioid_description2">Non-opioid pain management modalities tried first:</label>
+                            <textarea class="exercise_time_input" name="non_opioid_description2" style="resize: none;" placeholder=""></textarea>
+
+                            <br>
+                            <br>
+
+                            <!-- row3 -->
+                            <label for="medicine_time3">Time of day:</label>
+                            <input class="exercise_time_input" list="medicine_time_stamp3" name="medicine_time3">
+                            <datalist id="medicine_time_stamp3">
+                                                <option value="Morning (12am to 11:59am)">
+                                                <option value="Afternoon (12pm to 5.59pm)">
+                                                <option value="Evening (6pm to 11:59pm)">
+                                            </datalist>
+
+                            <label for="medicine_description3">Description of Medication-Name and dose:</label>
+                            <textarea class="exercise_time_input" name="medicine_description3" style="resize: none;" placeholder=""></textarea>
+
+                            <label for="pain3">Pain rating 0-10:</label>
+                            <input class="exercise_time_input" type="number" name="pain3" min="0" max="10">
+
+                            <label for="non_opioid_description3">Non-opioid pain management modalities tried first:</label>
+                            <textarea class="exercise_time_input" name="non_opioid_description3" style="resize: none;" placeholder=""></textarea>
+
+                            <br>
+                            <br>
+
+                            <!-- row4 -->
+                            <label for="medicine_time4">Time of day:</label>
+                            <input class="exercise_time_input" list="medicine_time_stamp4" name="medicine_time4">
+                            <datalist id="medicine_time_stamp4">
+                                                <option value="Morning (12am to 11:59am)">
+                                                <option value="Afternoon (12pm to 5.59pm)">
+                                                <option value="Evening (6pm to 11:59pm)">
+                                            </datalist>
+
+                            <label for="medicine_description4">Description of Medication-Name and dose:</label>
+                            <textarea class="exercise_time_input" name="medicine_description4" style="resize: none;" placeholder=""></textarea>
+
+                            <label for="pain4">Pain rating 0-10:</label>
+                            <input class="exercise_time_input" type="number" name="pain4" min="0" max="10">
+
+                            <label for="non_opioid_description4">Non-opioid pain management modalities tried first:</label>
+                            <textarea class="exercise_time_input" name="non_opioid_description4" style="resize: none;" placeholder=""></textarea>
+
+                            <br>
+                            <br>
+
+                            <!-- row5 -->
+                            <label for="medicine_time5">Time of day:</label>
+                            <input list="medicine_time_stamp5" name="medicine_time5">
+                            <datalist id="medicine_time_stamp5">
+                                                <option value="Morning (12am to 11:59am)">
+                                                <option value="Afternoon (12pm to 5.59pm)">
+                                                <option value="Evening (6pm to 11:59pm)">
+                                            </datalist>
+
+                            <label for="medicine_description5">Description of Medication-Name and dose:</label>
+                            <textarea name="medicine_description5" style="resize: none;" placeholder=""></textarea>
+
+                            <label for="pain5">Pain rating 0-10:</label>
+                            <input type="number" name="pain5" min="0" max="10">
+
+                            <label for="non_opioid_description5">Non-opioid pain management modalities tried first:</label>
+                            <textarea name="non_opioid_description5" style="resize: none;" placeholder=""></textarea>
+
+                            <br>
+                            <br>
+                        </div>
+                        <br>
+
+                        <button>Submit</button>
+                    </form>
+                </section>
+
+                <!--
+    script tag has to be here cause the html page need to load in first, if this was in the head there a out of range error value at null.
+-->
+                <script src="bundle.js"></script>
+</body>
+
+</html>
