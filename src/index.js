@@ -28,13 +28,13 @@ import {
 
 //Copy of 491 project 
 const firebaseConfig = {
-    apiKey: "AIzaSyCMJMDLCSxzwe235ZcFB3BNhH2IYRSLWAQ",
-    authDomain: "test-analysis-e29fa.firebaseapp.com",
-    projectId: "test-analysis-e29fa",
-    storageBucket: "test-analysis-e29fa.appspot.com",
-    messagingSenderId: "940649193603",
-    appId: "1:940649193603:web:c72e3d85f49a7b6712bbb6",
-    measurementId: "G-H95YE4E01S"
+    apiKey: "",
+    authDomain: "",
+    projectId: "",
+    storageBucket: "",
+    messagingSenderId: "",
+    appId: "",
+    measurementId: ""
 }
 
 
